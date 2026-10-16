@@ -9,7 +9,7 @@ public class Bangsal {
         this.nama = nama;
         kamar = new Kamar[jumlahKamar];
         for (int i = 0; i < jumlahKamar; i++) {
-            kamar[i] = new Kamar(i + 1, tarifPerMalam);   // KOMPOSISI
+            kamar[i] = new Kamar(i + 1, tarifPerMalam);   
         }
     }
 
@@ -18,7 +18,7 @@ public class Bangsal {
     public String getNama() { return nama; }
 
     public Kamar getKamar(int nomor) {
-        if (nomor < 1 || nomor > kamar.length) return null;   // guard clause indeks
+        if (nomor < 1 || nomor > kamar.length) return null;   
         return kamar[nomor - 1];
     }
 
@@ -33,7 +33,7 @@ public class Bangsal {
         System.out.println("Semua kamar penuh.");
     }
 
-    // overloading: ke kamar tertentu
+    
     public void rawatInap(Pasien p, int nomor) {
         Kamar k = getKamar(nomor);
         if (p == null || k == null) {

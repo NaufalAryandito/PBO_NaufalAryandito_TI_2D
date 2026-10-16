@@ -10,15 +10,16 @@ public class Main{
 
         Pasien budi = new PasienUmum("RM-001", "Budi", 3);
         budi.setDpjp(andi);
-        melati.rawatInap(budi);            // kamar 1
+        melati.rawatInap(budi);          
 
         Pasien sari = new PasienBPJS("RM-002", "Sari", 4, "0001234");
         sari.setDpjp(rina);
-        melati.rawatInap(sari, 3);         // kamar 3
+        melati.rawatInap(sari, 3);       
 
         Kasir kasir = new Kasir("Kasir 1");
         kasir.cetakTagihan(melati.getKamar(1));
         kasir.cetakTagihan(melati.getKamar(3));
         kasir.cetakTagihan(melati.getKamar(2));
+
     }
 }
